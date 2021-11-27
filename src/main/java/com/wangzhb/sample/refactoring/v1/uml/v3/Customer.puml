@@ -1,0 +1,20 @@
+@startuml
+class Customer {
+statement()
+getTotalCharge()
+getTotalFrequentRenterPoints()
+}
+
+class Rental {
+dayRented:int
+getCharge()
+getFrequentRenterPoints()
+}
+
+class Movie {
+priceCode:int
+}
+
+Customer "1" --> "*" Rental
+Rental "1" --> "1" Movie
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+
+Actor -> aCustomer ++ : statement
+aCustomer -> aCustomer ++ : * [getTotalChange]
+aCustomer -> aRental ++ : *[for all rentals] getCharge
+aRental -> aMovie ++ : getCharge(days)
+aMovie -> aPrice ++ : getCharge(days)
+return
+return
+return
+
+aCustomer -> aCustomer ++ : * [getTotalFrequentRenterPoints]
+aCustomer -> aRental ++ : *[for all rentals] getFrequentRenterPoints
+aRental -> aMovie ++ : getFrequentRenterPoints(days)
+aMovie -> aPrice ++ : getFrequentRenterPoints(days)
+return
+return
+return
+
+return
+return
+return
+
+@enduml

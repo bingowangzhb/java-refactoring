@@ -1,0 +1,17 @@
+@startuml
+
+Actor -> aCustomer ++ : statement
+aCustomer -> aCustomer ++ : * [for all rentals]
+aCustomer -> aRental ++ : getCharge
+aRental -> aMovie ++ : getPriceCode
+return
+return
+
+aCustomer -> aRental ++ : getFrequentRenterPoints
+aRental -> aMovie ++ : getPriceCode
+return
+return
+return
+return
+
+@enduml
